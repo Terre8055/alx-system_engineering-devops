@@ -1,1 +1,2 @@
-case
+#!/bin/bash
+chmod +x hello 
