@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script to read files from psswd
+
+
+while IFS=: read -r username password uid gid name homedir shell
+do
+  echo "The user $username is part of the $gid gang, lives in $homedir and rides $shell. $uid's place is protected by the passcode $password, more info about the user here: $name"
+done < /etc/passwd
+
