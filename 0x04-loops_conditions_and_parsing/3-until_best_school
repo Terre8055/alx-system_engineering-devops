@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times using until
+
+num=0
+LIMIT=10
+
+until (( "$num" > "$LIMIT" ))
+do
+    echo "Best School"
+    num="$((num + 1))"
+done

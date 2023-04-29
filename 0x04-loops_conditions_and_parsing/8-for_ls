@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script displays the content of the current working directory
+
+LIST=$(ls)
+
+for file in $LIST
+do  
+    basename "$file" | cut -d '-' -f 2
+done

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# displaying numbers from 1 to 20 and adding a special message for certain loop iterations 
+
+count=1   # initialize a counter variable
+
+while [ "$count" -le 20 ]
+do
+  case "$count" in
+    4)
+      echo -e "4\nbad luck from China"
+      ;;
+    9)
+      echo -e "9\nbad luck from Japan"
+      ;;
+    17)
+      echo -e "17\nbad luck from Italy"
+      ;;
+    *)
+      echo "$count"
+      ;;
+  esac
+  
+  count=$((count + 1))   # increment the counter
+done
