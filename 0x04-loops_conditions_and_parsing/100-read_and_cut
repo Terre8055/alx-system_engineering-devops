@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Script to read files from psswd
 
 while IFS=: read -r username password uid gid name homedir shell
 do
