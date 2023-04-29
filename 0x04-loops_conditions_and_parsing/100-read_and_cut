@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Script to read files from psswd
 
-while IFS=: read -r username password uid gid name homedir shell
+
+while IFS=: read -r username _password uid _gid _name homedir _shell
 do
   echo "$username: $uid : $homedir"
 done < /etc/passwd
