@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School". 4th itr prints bad 8th itr prints good luck
 
-count=0
+count=1
 
 while [ "$count" -le 10 ]
 do
