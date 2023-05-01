@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-# This bash script displays kills current running proc
+# This bash script displays list of current running proc
 
-COMMAND=$(kill 6730)
+# shellcheck disable=all
 
-echo "$COMMAND"
+PID=$(top | grep "4-to_infinity_and_beyond" | grep -v grep | awk '{print $2}')
+
+echo kill "$PID"
