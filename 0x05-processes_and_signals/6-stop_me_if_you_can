@@ -1,13 +1,4 @@
 #!/usr/bin/env bash
 # This bash script sends sigterm to its proc/file
 
-# shellcheck disable=SC2009
-PID=$(ps aux | grep "4-to_infinity_and_beyond" | grep -v grep | awk '{print $2}')
-
-if [ -z "$PID" ]; then
-  echo "Process 4-to_infinity_and_beyond is not running"
-else
-  # Write the SIGTERM signal to the process's /proc entry to stop it gracefully
-  echo -n "SIGTERM" > "/proc/$PID/status"
-  echo "Process 4-to_infinity_and_beyond stopped"
-fi
+pkill -f 4-to_infinity_and_beyond
