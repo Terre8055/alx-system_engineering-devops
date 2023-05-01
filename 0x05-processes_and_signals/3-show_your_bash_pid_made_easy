@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#This scripts displays only bash processes using TOP
+
+
+COMMAND=$(pgrep -l bash)
+
+echo "$COMMAND"
