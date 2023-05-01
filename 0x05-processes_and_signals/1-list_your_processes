@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This bash script displays list of current running proc
 
-command=$(ps -U root -u root u)
+command=$(ps -eo user,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm)
 
 echo "$command"
