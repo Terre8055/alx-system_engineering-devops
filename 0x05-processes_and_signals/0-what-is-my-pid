@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This bash script displays its own PID
+
+command=$(pidof -s bash)
+
+echo "$command"
+
