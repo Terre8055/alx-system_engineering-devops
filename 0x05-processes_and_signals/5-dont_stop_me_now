@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # This bash script displays list of current running proc
 
-# shellcheck disable=all
+# shellcheck disable=SC2009
 
-PID=$(top | grep "4-to_infinity_and_beyond" | grep -v grep | awk '{print $2}')
+PID=$(ps aux | grep "4-to_infinity_and_beyond" | grep -v grep | awk '{print $2}')
 
 echo kill "$PID"
