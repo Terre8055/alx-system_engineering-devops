@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This bash script displays list of current running proc
+
+command=$(ps -u)
+
+echo "$command"
