@@ -5,4 +5,5 @@
 
 PID=$(ps aux | grep "4-to_infinity_and_beyond" | grep -v grep | awk '{print $2}')
 
-echo kill "$PID"
+
+kill "$PID"
