@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#This scripts displays only bash processes
+# shellcheck disable=SC2009
+
+COMMAND=$(ps axo user,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm | grep -E 'bash')
+
+echo "$COMMAND"
+
