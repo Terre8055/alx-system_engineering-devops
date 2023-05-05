@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
-# This bash scripts answers questions related to ALX Networking basics
+# This bash script uses ping to test networks
 
-3
-2
-2
+if [ -z "$1" ]; then
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+    exit 1
+fi
+
+ping -c 5 "$1"
+
 

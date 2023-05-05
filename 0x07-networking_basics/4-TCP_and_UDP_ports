@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# This bash scripts answers questions related to ALX Networking basics
+# Displays listening ports. Includes listening sockets
 
-2
-2
-
+netstat -l --program
