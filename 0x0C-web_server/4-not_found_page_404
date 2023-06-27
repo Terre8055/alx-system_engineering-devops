@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# configure Nginx server
+
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "<!DOCTYPE html>
+<html>
+<head>
+    <title>404 Not Found</title>
+</head>
+<body>
+    <h1>404 Not Found</h1>
+    <p>Ceci n'est pas une page</p>
+</body>
+</html>
+" | sudo nano /var/www/html/404.html
+sudo sed -i '/server {/a \
+    error_page 404 /404.html;\
+' /etc/nginx/sites-available/default
+sudo service nginx restart
