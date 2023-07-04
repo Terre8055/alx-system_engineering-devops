@@ -45,7 +45,7 @@ frontend clickviral-tech-frontend
 
 backend amdterre-tech
     balance roundrobin
-    server 192208-web-0 52.86.119.89:80 check
+    server 192208-web-01 52.86.119.89:80 check
     server 192208-web-02 54.172.232.200:80 check
 "
 
