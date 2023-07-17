@@ -33,16 +33,16 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend clickviral-frontend
+frontend amdterre-frontend
         bind *:80
         mode http
         http-request set-header X_Forwarded-Proto http
         default_backend amdterre-backend
 
-frontend clickviral-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/www.amdterre.tech.pem
+frontend amdterre-frontend-https
+        bind *:443 ssl crt /etc/haproxy/certs/www.amdterre.tech
         http-request set-header X-Forwarded-Proto https
-        default_backend clickviral-backend
+        default_backend amdterre-backend
 
 backend amdterre-backend
         balance roundrobin
